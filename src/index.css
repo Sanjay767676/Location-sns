@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #0070f3;
-  --primary-hover: #005bb5;
-  --bg-color: #ffffff;
+  --primary-color: #111111;
+  --primary-hover: #333333;
+  --bg-color: #ffbf00;
   --text-primary: #111111;
-  --text-secondary: #666666;
-  --border-color: #eaeaea;
+  --text-secondary: #444444;
+  --border-color: rgba(0,0,0,0.1);
   --card-bg: #ffffff;
-  --success-color: #0070f3;
+  --success-color: #22c55e;
   --error-color: #e00;
   
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
@@ -22,7 +22,7 @@
   font-weight: 400;
   color-scheme: light;
   color: var(--text-primary);
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -107,14 +107,14 @@ h2 {
   padding: 1.5rem;
   text-align: center;
   animation: fadeIn 0.4s ease-out;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
 }
 
 .bottom-action {
   margin-top: auto;
   width: 100%;
   padding: 1.5rem 0;
-  background: #ffffff;
+  background: var(--bg-color);
 }
 
 /* Mobile Optimizations */
@@ -132,16 +132,16 @@ h2 {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 112, 243, 0.4); }
-  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 112, 243, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 112, 243, 0); }
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(17, 17, 17, 0.4); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(17, 17, 17, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(17, 17, 17, 0); }
 }
 
 /* Welcome Screen */
 .typewriter-text {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(90deg, var(--primary-color), #00d2ff);
+  background: linear-gradient(90deg, var(--primary-color), #555555);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -195,7 +195,7 @@ h2 {
 
 .department-item.selected {
   border-color: var(--primary-color);
-  background-color: rgba(0, 112, 243, 0.05);
+  background-color: rgba(17, 17, 17, 0.05);
   box-shadow: 0 0 0 2px var(--primary-color);
 }
 
@@ -209,7 +209,7 @@ h2 {
 
 .nav-header {
   padding: 1.25rem 1rem;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
   z-index: 10;
   box-shadow: var(--shadow-sm);
@@ -258,7 +258,7 @@ h2 {
 
 .map-container {
   flex: 1;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   position: relative;
   display: flex;
   align-items: center;
@@ -286,7 +286,7 @@ h2 {
 
 .nav-progress {
   padding: 1.25rem 1rem;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-top: 1px solid var(--border-color);
   max-height: 45%;
   overflow-y: auto;
@@ -334,23 +334,41 @@ h2 {
 }
 
 .waypoint-item.current .waypoint-icon {
-  border-color: var(--primary-color);
-  background-color: rgba(0, 112, 243, 0.1);
-  color: var(--primary-color);
 }
 
-/* Reached Screen */
-.confetti-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
+/* Custom Fonts for Welcome Screen */
+.charis-sil-regular {
+  font-family: "Charis SIL", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.reached-title {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+.charis-sil-bold {
+  font-family: "Charis SIL", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.reached-subtitle {
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
+.charis-sil-regular-italic {
+  font-family: "Charis SIL", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.charis-sil-bold-italic {
+  font-family: "Charis SIL", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.charm-regular {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
 }

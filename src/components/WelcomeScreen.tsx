@@ -1,24 +1,51 @@
 import React, { useEffect } from 'react';
+import ShinyText from './ShinyText';
 
 interface WelcomeScreenProps {
   onComplete: () => void;
 }
 
+// Change this value to increase or decrease the delay before moving to the next page
+const DISPLAY_DELAY_MS = 5000;
+
 export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onComplete }) => {
   useEffect(() => {
-    // The typing animation is CSS-based and takes 1.5s
-    // We wait for the animation to finish + 1s delay
+    // We wait for the animation to finish + delay
     const timer = setTimeout(() => {
       onComplete();
-    }, 2500);
+    }, DISPLAY_DELAY_MS);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
 
   return (
     <div className="screen-container">
-      <h2>Welcome to</h2>
-      <div className="typewriter-text">SNS Institutions</div>
+      <h2 className="charis-sil-regular" style={{ fontSize: '3.5rem', marginBottom: '0', lineHeight: '1' }}>
+        <ShinyText
+          text="Welcome to"
+          speed={2}
+          delay={0}
+          color="#000000ff"
+          shineColor=""
+          spread={120}
+          direction="left"
+          yoyo={false}
+          pauseOnHover={false}
+          disabled={false}
+        />
+      </h2>
+      <div style={{ marginTop: '0.5rem', fontSize: '6.5rem', lineHeight: '1' }}>
+        <ShinyText
+          text="SNS Institutions"
+          speed={3}
+          color="#111111"
+          shineColor="#ffffff"
+          direction="left"
+          className="charm-bold"
+          spread={100}
+          yoyo={true}
+        />
+      </div>
     </div>
   );
 };
