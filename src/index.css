@@ -3,7 +3,7 @@
   --title-size-desktop: 3.5rem;
   --title-size-mobile: 2.5rem;
   --subtitle-size-desktop: 7.5rem;
-  --subtitle-size-mobile: 14vw;
+  --subtitle-size-mobile: 11vw;
 
   --primary-color: #111111;
   --primary-hover: #333333;
@@ -165,7 +165,7 @@ h2 {
 
 .welcome-subtitle {
   font-size: var(--subtitle-size-desktop);
-  word-wrap: break-word;
+  white-space: normal;
 }
 
 @keyframes typing {
