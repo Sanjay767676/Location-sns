@@ -20,7 +20,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onComplete }) => {
 
   return (
     <div className="screen-container">
-      <h2 className="charis-sil-regular" style={{ fontSize: '3.5rem', marginBottom: '0', lineHeight: '1' }}>
+      <h2 className="charis-sil-regular welcome-title" style={{ marginBottom: '0', lineHeight: '1' }}>
         <ShinyText
           text="Welcome to"
           speed={2}
@@ -34,7 +34,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onComplete }) => {
           disabled={false}
         />
       </h2>
-      <div style={{ marginTop: '0.5rem', fontSize: '6.5rem', lineHeight: '1' }}>
+      <div className="welcome-subtitle" style={{ marginTop: '0.5rem', lineHeight: '1' }}>
         <ShinyText
           text="SNS Institutions"
           speed={3}

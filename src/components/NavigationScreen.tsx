@@ -76,7 +76,7 @@ export const NavigationScreen: React.FC<NavigationScreenProps> = ({
         
         {targetWaypoint && (
           <>
-            <div className="target-waypoint">Go to {targetWaypoint.name}</div>
+            <div className="target-waypoint">{targetWaypoint.instruction || `Go to ${targetWaypoint.name}`}</div>
             <div className="distance-info">
               {error ? (
                 <span style={{ color: 'var(--error-color)' }}>{error}</span>
@@ -93,7 +93,8 @@ export const NavigationScreen: React.FC<NavigationScreenProps> = ({
       <div className="nav-body">
         <MapView 
           currentLocation={currentLocation} 
-          targetWaypoint={targetWaypoint} 
+          targetWaypoint={targetWaypoint}
+          route={waypoints.slice(currentStepIndex)}
         />
         
         <div className="nav-progress">
@@ -111,7 +112,7 @@ export const NavigationScreen: React.FC<NavigationScreenProps> = ({
                   <div className="waypoint-icon">
                     {isCompleted ? '✓' : isCurrent ? '→' : '○'}
                   </div>
-                  <span>{wp.name}</span>
+                  <span>{wp.instruction || wp.name}</span>
                 </div>
               );
             })}

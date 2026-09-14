@@ -1,50 +1,66 @@
 export interface Coordinate {
+  id: string;
   name: string;
   latitude: number;
   longitude: number;
+  instruction: string;
 }
 
-// These coordinates are placeholders. 
-// You can edit these values without changing the application logic.
 export const campusLocations: Record<string, Coordinate> = {
   mainGate: {
+    id: "mainGate",
     name: "Main Gate",
-    latitude: 11.000000,
-    longitude: 76.000000
+    latitude: 11.100752,
+    longitude: 77.025918,
+    instruction: "Enter the main gate."
   },
-  location1: {
-    name: "Location 1",
-    latitude: 11.000100,
-    longitude: 76.000100
+  lawn: {
+    id: "lawn",
+    name: "Lawn",
+    latitude: 11.100652,
+    longitude: 77.026441,
+    instruction: "Go straight into the lawn."
   },
-  location2: {
-    name: "Location 2",
-    latitude: 11.000200,
-    longitude: 76.000200
+  lawnStraight: {
+    id: "lawnStraight",
+    name: "After Lawn",
+    latitude: 11.100756,
+    longitude: 77.026950,
+    instruction: "Go straight after the lawn."
   },
-  location3: {
-    name: "Location 3",
-    latitude: 11.000300,
-    longitude: 76.000300
+  foodCourt: {
+    id: "foodCourt",
+    name: "Food Court",
+    latitude: 11.100616,
+    longitude: 77.027530,
+    instruction: "Cross the Food court."
   },
-  cseBlock: {
-    name: "CSE Block",
-    latitude: 11.000400,
-    longitude: 76.000400
+  roadTurn: {
+    id: "roadTurn",
+    name: "Road to AI Campus",
+    latitude: 11.100907,
+    longitude: 77.027828,
+    instruction: "Take a left turn into the road to SNS College of Technology AI Campus."
   },
-  cseClassroom: {
-    name: "CSE First Year Classroom",
-    latitude: 11.000450,
-    longitude: 76.000450
+  playground: {
+    id: "playground",
+    name: "SNS Playground",
+    latitude: 11.101520,
+    longitude: 77.027805,
+    instruction: "Go straight in that road and cross the SNS Playground."
   },
-  itBlock: {
-    name: "IT Block",
-    latitude: 11.000500,
-    longitude: 76.000200
+  auditorium: {
+    id: "auditorium",
+    name: "Open Auditorium",
+    latitude: 11.103018,
+    longitude: 77.027508,
+    instruction: "Cross the Open Auditorium."
   },
-  itClassroom: {
-    name: "IT First Year Classroom",
-    latitude: 11.000550,
-    longitude: 76.000250
+  aiCampus: {
+    id: "aiCampus",
+    name: "SNS College of Technology AI Campus",
+    latitude: 11.103200, // Offset slightly to simulate arriving at the entrance
+    longitude: 77.027400,
+    instruction: "Turn left. Opposite the Saibaba Temple is the AI Campus."
   }
 };

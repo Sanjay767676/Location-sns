@@ -59,7 +59,7 @@ function App() {
 
       {appState === 'DESTINATION_REACHED' && selectedDepartment && (
         <DestinationReached 
-          departmentName={selectedDepartment.name}
+          department={selectedDepartment}
           onRestart={handleRestart}
         />
       )}

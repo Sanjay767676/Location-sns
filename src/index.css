@@ -123,6 +123,8 @@ h2 {
   h2 { font-size: 1.35rem; }
   .screen-container { padding: 1rem; }
   button { padding: 1em 1.2em; font-size: 1.05rem; }
+  .welcome-title { font-size: 2.5rem; }
+  .welcome-subtitle { font-size: 4rem; }
 }
 
 /* Animations */
@@ -149,6 +151,15 @@ h2 {
   white-space: nowrap;
   border-right: 3px solid var(--primary-color);
   animation: typing 1.5s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+.welcome-title {
+  font-size: 3.5rem;
+}
+
+.welcome-subtitle {
+  font-size: 7.5rem;
+  word-wrap: break-word;
 }
 
 @keyframes typing {
