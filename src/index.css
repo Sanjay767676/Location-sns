@@ -1,4 +1,10 @@
 :root {
+  /* Welcome Screen Text Sizes */
+  --title-size-desktop: 3.5rem;
+  --title-size-mobile: 2.5rem;
+  --subtitle-size-desktop: 7.5rem;
+  --subtitle-size-mobile: 14vw;
+
   --primary-color: #111111;
   --primary-hover: #333333;
   --bg-color: #ffbf00;
@@ -123,8 +129,8 @@ h2 {
   h2 { font-size: 1.35rem; }
   .screen-container { padding: 1rem; }
   button { padding: 1em 1.2em; font-size: 1.05rem; }
-  .welcome-title { font-size: 2.5rem; }
-  .welcome-subtitle { font-size: 4rem; }
+  .welcome-title { font-size: var(--title-size-mobile); }
+  .welcome-subtitle { font-size: var(--subtitle-size-mobile); }
 }
 
 /* Animations */
@@ -154,11 +160,11 @@ h2 {
 }
 
 .welcome-title {
-  font-size: 3.5rem;
+  font-size: var(--title-size-desktop);
 }
 
 .welcome-subtitle {
-  font-size: 7.5rem;
+  font-size: var(--subtitle-size-desktop);
   word-wrap: break-word;
 }
 
