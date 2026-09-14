@@ -3,26 +3,27 @@
   --title-size-desktop: 3.5rem;
   --title-size-mobile: 2.5rem;
   --subtitle-size-desktop: 7.5rem;
-  --subtitle-size-mobile: 11vw;
+  /* CHANGE THIS VALUE to adjust the size of 'SNS Institutions' on mobile devices */
+  --subtitle-size-mobile: 14vw;
 
   --primary-color: #111111;
   --primary-hover: #333333;
   --bg-color: #ffbf00;
   --text-primary: #111111;
   --text-secondary: #444444;
-  --border-color: rgba(0,0,0,0.1);
+  --border-color: rgba(0, 0, 0, 0.1);
   --card-bg: #ffffff;
   --success-color: #22c55e;
   --error-color: #e00;
-  
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-lg: 0 12px 24px rgba(0,0,0,0.12);
-  
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-full: 9999px;
-  
+
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -123,26 +124,72 @@ h2 {
   background: var(--bg-color);
 }
 
+/* Welcome Screen Text */
+.welcome-title {
+  font-size: var(--title-size-desktop);
+}
+
+.welcome-subtitle {
+  font-size: var(--subtitle-size-desktop);
+  white-space: nowrap;
+}
+
 /* Mobile Optimizations */
-@media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.35rem; }
-  .screen-container { padding: 1rem; }
-  button { padding: 1em 1.2em; font-size: 1.05rem; }
-  .welcome-title { font-size: var(--title-size-mobile); }
-  .welcome-subtitle { font-size: var(--subtitle-size-mobile); }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .screen-container {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 1em 1.2em;
+    font-size: 1.05rem;
+  }
+
+  .welcome-title {
+    font-size: var(--title-size-mobile);
+  }
+
+  .welcome-subtitle {
+    font-size: var(--subtitle-size-mobile);
+  }
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(17, 17, 17, 0.4); }
-  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(17, 17, 17, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(17, 17, 17, 0); }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(17, 17, 17, 0.4);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(17, 17, 17, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(17, 17, 17, 0);
+  }
 }
 
 /* Welcome Screen */
@@ -159,23 +206,28 @@ h2 {
   animation: typing 1.5s steps(20, end), blink-caret 0.75s step-end infinite;
 }
 
-.welcome-title {
-  font-size: var(--title-size-desktop);
-}
 
-.welcome-subtitle {
-  font-size: var(--subtitle-size-desktop);
-  white-space: normal;
-}
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--primary-color); }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--primary-color);
+  }
 }
 
 /* Department Selector */
@@ -307,7 +359,7 @@ h2 {
   border-top: 1px solid var(--border-color);
   max-height: 45%;
   overflow-y: auto;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .waypoint-list {
@@ -350,8 +402,7 @@ h2 {
   border-color: var(--success-color);
 }
 
-.waypoint-item.current .waypoint-icon {
-}
+.waypoint-item.current .waypoint-icon {}
 
 /* Custom Fonts for Welcome Screen */
 .charis-sil-regular {
